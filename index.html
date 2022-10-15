@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="style.less">
     <title>Home Page!</title>
     <style>
-        
         .row-header {
             margin: 0px auto;
             padding: 0px auto;
@@ -62,6 +61,11 @@
             color: floralwhite;
         }
 
+        .hh {
+
+            background-color: #563d7c;
+        }
+
         #easy {
             color: floralwhite;
         }
@@ -70,6 +74,12 @@
             font-weight: bolder;
 
             color: floralwhite;
+        }
+
+        .ss {
+
+            color: floralwhite;
+
         }
 
         .footer {
@@ -117,22 +127,26 @@
             left: 0;
             min-height: 300px;
         }
-        #carouselButton
-        {
+
+        #carouselButton {
             right: 0px;
             position: absolute;
             left: 0;
             bottom: 0px;
 
         }
+
         #carouselButton {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
-    z-index: 1;
-}
+            right: 0px;
+            position: absolute;
+            bottom: 0px;
+            z-index: 1;
+        }
 
+        .fff {
 
+            background-color: #d1c4E9;
+        }
     </style>
 </head>
 
@@ -159,38 +173,100 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a id="easy" class="nav-link dropdown-toggle" href="ContactUsf.html" id="navbarDropdown" role="button"
+                        <a id="easy" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-address-card fa-lg"></i> Contact Us
                         </a>
-                      
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="ContactUsf.html">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                     </li>
 
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                        <span class="fa fa-sign-in"></span> Login</a>
+                <span class="navbar-text ss">
+                    <a data-toggle="modal" data-target="#login" class="ss">
+                        <span class="fa fa-sign-in ss"></span> <span><span class="ss">
+                                Login</a></span>
 
                 </span>
 
             </div>
         </nav>
     </div>
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header hh">
+                    <h4 class="modal-title ss"> Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body fff">
+                    <form class="fff">
+                        <div class="form-row fff ">
+
+                            <div class="card fff">
+
+
+
+
+                                <div class="form-group form-inline row mb-3 ml-0 my-4">
+                                    
+                                    <input type="text" class=" ml-4 form-control input-sm col-3"
+                                        placeholder="Enter Email" aria-label="First name">
+
+                                    <input type="text" class="form-control ml-4 input-sm col-3" placeholder="Password"
+                                        aria-label="Last name">
+                                        <div class="form-check ml-4">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                          </div>
+                                          <div class="container ml-4 mt-4">
+<div class="row">
+                                        <button type="button"
+                                            class="btn btn-secondary btn-sm ml-5 "
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary btn-sm ml-2">Sign in</button>
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">   Reserve a Table</h4>
+                <div class="modal-header hh">
+
+
+                    <h4 class="modal-title ss" id="myButton" data-loading-text="Loading..."> Reserve a Table</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
+                <div class="modal-body fff">
+                    <form class="fff">
+                        <div class="form-row fff ">
 
-                            <div class="card">
-                               
-                                <span class="mb-3 ml-4 mt-4 hh">Number of Guests
+                            <div class="card fff">
+                                <div class="row ml-4 mt-4 ">
+                                    <span id='ct pt-3 '> Time Remaining in Discount Offer
+                                        <span class="badge badge-danger ml-4 pt-3">
+                                            <p id="demo"></p>
+                                        </span></span>
+                                </div>
+                                <span class="mb-3 ml-4 mt-4 ">Number of Guests
                                     <div class="form-check form-check-inline ml-5 align-items-FIRST">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                             id="inlineRadio1" value="option1">
@@ -222,35 +298,37 @@
                                         <label class="form-check-label" for="inlineRadio2">6</label>
                                     </div>
                                 </span>
-                                <span class="mb-3 ml-4 my-4 hh">Section
-                                   
-                                        
+                                <span class="mb-3 ml-4 my-4 ">Section
+
+
                                     <button type="button" class="btn ml-4 btn-success btn-sm">Non Smooking</button>
                                     <button type="button" class="btn btn-danger btn-sm">Smooking</button>
-                               
+
                                 </span>
-                                
+
                                 <div class="form-group form-inline row mb-3 ml-0 my-4">
-                                 <label class="mb-3 ml-4 my-4 hh">Date and Time
-                                    
-                                 </label>
-                                            <input type="text" class=" ml-4 form-control input-sm col-3" placeholder="Date"
-                                                aria-label="First name">
-                                  
-                                            <input type="text" class="form-control ml-4 input-sm col-3" placeholder="Time"
-                                                aria-label="Last name">
-                                      
-                                
-                            </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-5  justify-content-center align-items-center" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-2">Sign in</button>
-                            </div>
+                                    <label class="mb-3 ml-4 my-4 ">Date and Time
+
+                                    </label>
+                                    <input type="text" class=" ml-4 form-control input-sm col-3" placeholder="Date"
+                                        aria-label="First name">
+
+                                    <input type="text" class="form-control ml-4 input-sm col-3" placeholder="Time"
+                                        aria-label="Last name">
+
+
+                                </div>
+                                <div class="form-row mb-3">
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm ml-5  justify-content-center align-items-center"
+                                        data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-2">Sign in</button>
+                                </div>
                             </div>
                         </div>
 
                 </div>
-                
+
                 </form>
             </div>
         </div>
@@ -270,9 +348,9 @@
                 </div>
 
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
-                        title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom"
-                        href="#reserveform">Reserve Table</a>
+                    <a data-toggle="modal" data-target="#loginModal" role="button " id="myButton"
+                        data-loading-text="Loading..." class="btn btn-warning nn" onmouseover="mOver(this)"
+                        onmouseout="mOut(this)">Reserve Table</a>
                 </div>
             </div>
     </header>
@@ -327,13 +405,13 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
     </div>
-  
+
     </div>
     </div>
     <div class="row">
@@ -398,6 +476,8 @@
         </div>
     </div>
     </div>
+    <span id="countdown"></span>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -453,20 +533,91 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script>
-<
-      $("#carouselButton").click(function(){
-        if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-            $("#mycarousel").carousel('pause');
-            $("#carouselButton").children("span").removeClass('fa-pause');
-            $("#carouselButton").children("span").addClass('fa-play');
+
+        $("#carouselButton").click(function () {
+            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
+            }
+            else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                $("#mycarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');
+            }
+        });
+
+    </script>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Go Now & Get 50% Discount"
         }
-        else if ($("#carouselButton").children("span").hasClass('fa-play')){
-            $("#mycarousel").carousel('cycle');
-            $("#carouselButton").children("span").removeClass('fa-play');
-            $("#carouselButton").children("span").addClass('fa-pause');                    
+
+        function mOut(obj) {
+            obj.innerHTML = "Reserve a Table"
         }
-    });
-</script>
+    </script>
+
+    <script>
+        $('#myButton').on('click', function () {
+            var $btn = $(this).button('loading')
+            // business logic...
+            $btn.button('reset')
+        })
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <script>
+        function myFunction() {
+            var inputVal = document.getElementById('myInput').value;
+            var seconds = inputVal, $seconds = document.querySelector('#countdown');
+            (function countdown() {
+                $seconds.textContent = seconds + ' second' + (seconds == 1000 ? '' : 's')
+                if (seconds-- > 0) setTimeout(countdown, 1000)
+            })();
+        }
+    </script>
+    <script type="text/javascript">
+        function display_c() {
+            var refresh = 1000; // Refresh rate in milli seconds
+            mytime = setTimeout('display_ct()', refresh)
+        }
+
+        function display_ct() {
+            var x = new Date()
+            document.getElementById('ct').innerHTML = x;
+            display_c();
+        }
+    </script>
 </body>
 
 </html>
